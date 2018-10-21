@@ -1,0 +1,277 @@
+body{
+	font-family: 'Dancing Script', cursive;
+	background-color: #02010a;
+	margin: 0;
+	padding: 0;
+}
+
+h1{
+	padding-left: 10px;
+}
+
+a{
+	text-decoration: underline;
+	color: inherit;
+	padding-right: 10px;
+	cursor: pointer;
+}
+
+p{
+	padding-left: 10px;
+}
+
+img{
+	display: block;
+	width: 90%;
+	margin: 2em auto;
+	box-shadow:2px 2px 2px #02010a;
+	border: 2px solid;
+}
+
+
+.contRetratos, .contenido{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+.contenido{
+	width: 900px;
+	margin: 5px auto;
+}
+
+.actual {
+	text-decoration: none;
+}
+
+.headerIzq{
+	border-radius: 10px 0px 0px 0px;
+	border: 1px solid #5b7989;
+}
+
+.headerDer{
+	text-align: right;
+	border-radius: 0px 10px 0px 0px;
+	border: 1px solid #5b7989;
+}
+
+.footerContacto{
+	border-radius: 0px 0px 0px 10px;
+}
+
+.footerDerechos{
+	border-radius: 0px 0px 10px 0px;
+}
+
+.bodyCentral{
+	padding: 0;
+	margin: 0;
+	background-color: #82c3a6 !important;
+}
+
+.iconTwitter{
+	background-position-x: 30px;
+}
+
+.iconInstagram{
+	background-position-x: 60px;
+}
+
+#paisaje:hover{
+	-webkit-animation: rotar 5s;
+	animation: rotar 5s;
+}
+
+#retrato:hover{
+	-webkit-animation: trans 5s;
+	animation: trans 3s;
+}
+
+div[class^=icon]{
+	background-image: url(../imagenes/redes.png);
+	width: 15px;
+	height: 15px;
+	border-radius: 3px;
+}
+
+div[class^=header] {
+	background-color: #5b7989;
+	color: white;
+	text-shadow: 0 0 2px #02010a;
+}
+
+div[id^=sup]{
+	border: 1px solid #5b7989;
+}
+
+div[id^=inf]{
+	border: 1px solid #C6d5c5;
+}
+
+div[class^=body] {
+	background-color: #d5c75f;
+	text-align: center;
+	text-decoration: underline;
+}
+
+div[class^=paisaje], .contRetratos{
+	background-color: #d5c75f;
+}
+
+div[class^=footer] {
+	background-color: #C6d5c5;
+}
+
+h1:nth-child(2){
+	flex-grow: 1;
+	text-align: right;
+}
+
+div[class$=P] img{
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.contRetratos div:nth-child(even) img{
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.contRetratos div:nth-child(1) img{
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+
+.contRetratos div:nth-child(3) img{
+	-webkit-filter: sepia(90%);
+	filter: sepia(90%);
+}
+
+.paisaje1 img{
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+
+.paisaje3 img{
+	-webkit-filter: sepia(90%);
+	filter: sepia(90%);
+}
+
+.footerRedes div{
+	float: left;
+	margin-left: 3px;
+}
+
+@media (min-width:900px) {
+	div[class^=header] {
+		width: 49.77%;
+	}
+
+	div[class^=footer] {
+		width: 24.88%;
+	}
+
+	div[class^=paisaje]{
+		width: 33.30%;
+	}
+
+	.contRetratos{
+		width: 99.9%;
+	}
+
+	.bodyCentral{
+		width: 99.99%;
+	}
+
+	.bodyIzq, .bodyDer{
+		width: 49.99%;
+	}
+
+	.contRetratos div[class^=retrato] {
+		width: 33.30%;
+	}
+}
+
+@media (max-width:900px) {
+	.contenido{
+		width: 100%;
+		margin: 0;
+	}
+
+	div[class^=body] {
+		width: 100%;
+	}
+
+	div[class^=header] {
+		width: 100%;
+		border-radius: 0px;
+		text-align: center;
+	}
+
+	div[class^=footer] {
+		width: 100%;
+		border-radius: 0px;
+	}
+
+	div[class^=paisaje], .contRetratos div[class^=retrato] {
+		width: 100%;
+	}
+}
+
+@-webkit-keyframes rotar {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(45deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes rotar {
+	0% {
+		transform: rotate(0deg);
+		box-shadow:2px 2px 2px #02010a;
+	}
+	50% {
+		transform: rotate(45deg);
+		box-shadow:2px 2px 2px #82c3a6;
+	}
+	100% {
+		transform: rotate(0deg);
+		box-shadow:2px 2px 2px #02010a;
+	}
+}
+
+@-webkit-keyframes trans{
+	0% {
+		transform: translateX(0px);
+		box-shadow:2px 2px 2px #02010a;
+	}
+	50% {
+		transform: translateX(15px);
+		box-shadow:2px 2px 2px #82c3a6;
+	}
+	100% {
+		transform: translateX(0px);
+		box-shadow:2px 2px 2px #02010a;
+	}
+}
+
+@keyframes trans {
+	0% {
+		transform: translate(0px, 0px);
+		box-shadow:2px 2px 2px #02010a;
+	}
+	50% {
+		transform: translate(15px, -15px);
+		box-shadow:2px 2px 2px #82c3a6;
+	}
+	100% {
+		transform: translate(0px, 0px);
+		 box-shadow:2px 2px 2px #02010a;
+	 }
+}
